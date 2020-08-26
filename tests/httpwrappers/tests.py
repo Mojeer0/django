@@ -168,7 +168,7 @@ class QueryDictTests(SimpleTestCase):
         self.assertEqual(q.setdefault('foo', 'bar'), 'bar')
         self.assertEqual(q['foo'], 'bar')
         self.assertEqual(q.getlist('foo'), ['bar'])
-        self.assertIn(q.urlencode(), ['foo=bar&name=john', 'name=john&foo=bar'])
+        self.assertIn(q.urlencode(), ['foo=bar&amp;name=john', 'name=john&amp;foo=bar'])
 
         q.clear()
         self.assertEqual(len(q), 0)

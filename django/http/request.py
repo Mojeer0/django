@@ -575,7 +575,7 @@ class QueryDict(MultiValueDict):
                 encode(k.encode(self.encoding), str(v).encode(self.encoding))
                 for v in list_
             )
-        return '&'.join(output)
+        return '&amp;'.join(output)
 
 
 class MediaType:
